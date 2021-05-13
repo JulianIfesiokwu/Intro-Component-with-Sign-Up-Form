@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-red: hsl(0, 100%, 74%);
+    --primary-green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+    background-image: url('../images/bg-intro-desktop.png');
+    background-color: var(--primary-red);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 8rem;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.intro {
+    flex: 1;
+    color: #fff;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+}
+
+.about {
+    width: 75%;
+}
+
+.interactive {
+    flex: 1;
+    border-radius: 10px;
+    box-shadow: 0 10px 0 gray;
+}
+
+.highlight {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: var(--blue);
+    padding: 0.2rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 0 gray;
+}
+
+.thick {
+    font-weight: 700;
+}
+
+form {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container {
+    width: 100%;    
+    margin-bottom: 1rem;       
+}
+
+input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px; 
+    border: 1px solid var(--grayish-blue);
+}
+
+::placeholder {
+    color: var(--dark-blue);
+    font-weight: 400;
+}
+
+.error-message {
+    text-align: end;
+    color: var(--primary-red);
+    font-style: italic;
+    margin: 0;
+    display: none;
+}
+
+.exclamation {
+    display: none;
+}
+
+.cta {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    box-shadow: 0 10px 0 gray;
+    background-color: var(--primary-green);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.terms {
+    color: var(--grayish-blue);
+    text-align: center;
+    margin: 0;
+}
+
+.highlighted {
+    font-weight: 700;
+    color: var(--primary-red);
+}
+
+
+/* For screens 375 and below */
+@media only screen and (max-width: 425px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+
+    .intro {
+        width: 100%;
+    }
+
+    .about {
+        width: 100%;
+        text-align: center;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    .terms {
+        font-size: 12px;
+    }
+  }
