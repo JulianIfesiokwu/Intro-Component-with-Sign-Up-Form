@@ -24,7 +24,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 8rem;
+    padding: 3rem 8rem;
     justify-content: center;
     align-items: center;
     gap: 5%;
@@ -76,17 +76,36 @@ form {
     align-items: center;
 }
 
+.big-container {
+    width: 100%;
+    margin-bottom: 1rem;
+    border: none;
+}
+
 .input-container {
-    width: 100%;    
-    margin-bottom: 1rem;       
+    width: 100%;
+    border-radius: 5px; 
+    border: 1px solid var(--grayish-blue);     
 }
 
 input {
-    width: 100%;
+    width: 80%;
     font-size: 1rem;
     padding: 10px;
-    border-radius: 5px; 
-    border: 1px solid var(--grayish-blue);
+    border: none;
+    outline: none;    
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    background-color: white;
 }
 
 ::placeholder {
@@ -95,27 +114,35 @@ input {
 }
 
 .error-message {
-    text-align: end;
+    float: right;
     color: var(--primary-red);
     font-style: italic;
+    font-size: 12px;
     margin: 0;
-    display: none;
+    visibility: hidden;
 }
 
 .exclamation {
     display: none;
+    float: right;
+    padding-right: 10px;
+    padding-top: 10px;
 }
 
 .cta {
     width: 100%;
     font-size: 1rem;
-    padding: 10px;
+    padding: 1rem;
     box-shadow: 0 10px 0 gray;
     background-color: var(--primary-green);
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 1rem;
+}
+
+.cta:hover {
+    opacity: 0.8;
 }
 
 .terms {
@@ -127,6 +154,11 @@ input {
 .highlighted {
     font-weight: 700;
     color: var(--primary-red);
+}
+
+/* for error messages */
+.error {
+    border: 2px solid var(--primary-red);
 }
 
 
