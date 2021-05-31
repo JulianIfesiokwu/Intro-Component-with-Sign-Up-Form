@@ -24,10 +24,10 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 3rem 8rem;
+    padding: 1rem 8rem;
     justify-content: center;
     align-items: center;
-    gap: 5%;
+    gap: 2%;
 }
 
 .intro {
@@ -78,7 +78,7 @@ form {
 
 .big-container {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     border: none;
 }
 
@@ -93,19 +93,16 @@ input {
     font-size: 1rem;
     padding: 10px;
     border: none;
-    outline: none;    
+    outline: none;
+    border-radius: 5px;     
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-    background-color: white;
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-background-color: #fff !important;
 }
 
 ::placeholder {

@@ -44,7 +44,6 @@ function highlightField(field) {
     field.nextElementSibling.style.display='inline-block';
     field.parentElement.nextElementSibling.style.visibility='visible';
     field.parentElement.classList.add('error');
-
 }
 
 
